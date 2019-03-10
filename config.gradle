@@ -11,20 +11,26 @@ ext {
     photoView_version = "2.0.0"
     runner_version = "1.0.2"
     espresso_core = "3.0.2"
+    butterknife_version = "8.8.1"
 
-    isModule = true
+    isModule = false
     android = [
             compileSdkVersion: 26,
             minSdkVersion    : 14,
-            targetSdkVersion : 26,
+            targetSdkVersion : 21,
             versionCode      : 1,
             versionName      : "1.0"
     ]
 
     appId = [
-            "app"         : "com.example.playandroid",
-            "module_news" : "com.example.module_news",
-            "module_girls": "com.example.module_girls"
+            "app" : "com.example.playandroid",
+            "module_login" : "com.example.loginmodule",
+            "module_collection": "com.example.collection_module",
+            "module_knowledge" : "com.example.module_news",
+            "module_my": "com.example.my_module",
+            "module_search" : "com.example.search_module",
+            "module_share": "com.example.share_module",
+
     ]
 
 
@@ -45,7 +51,7 @@ ext {
             "arouter_compiler": "com.alibaba:arouter-compiler:${arouter_compiler}",
             "runner" : "com.android.support.test:runner:${runner_version}",
             "espresso_core" : "com.android.support.test.espresso:espresso-core:${espresso_core}",
-
+            "butterknife" :"com.jakewharton:butterknife:${butterknife_version}"
     ]
 
 }

@@ -1,1 +1,1 @@
-include ':app', ':corelib'
+include ':app', ':core_lib', ':login_module', ':knowledge_module', ':search_module', ':collection_module', ':share_module', ':my_module'
