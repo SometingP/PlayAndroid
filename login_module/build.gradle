@@ -55,5 +55,4 @@ dependencies {
     implementation project(':core_lib')
     implementation 'com.squareup.retrofit2:converter-scalars:2.0.0'
 //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'org.greenrobot:eventbus:3.0.0'
 }

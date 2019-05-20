@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.example.corelib.net.rx.RxjavaClient;
 
+/**
+ * @author 13973
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

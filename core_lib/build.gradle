@@ -24,6 +24,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["appcompat_v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
     testImplementation rootProject.ext.dependencies["junit"]
     api(rootProject.ext.dependencies["recyclerview"])
     api(rootProject.ext.dependencies["cardview"])
@@ -37,4 +38,6 @@ dependencies {
     api(rootProject.ext.dependencies["arouter_api"])
     api(rootProject.ext.dependencies["okhttp3"])
     api(rootProject.ext.dependencies["butterknife"])
+    api(rootProject.ext.dependencies["eventbus"])
+    api(rootProject.ext.dependencies["disklrucache"])
 }

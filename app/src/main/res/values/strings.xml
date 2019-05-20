@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PlayAndroid</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="main">首页fragment</string>
+    <string name="knowledge">知识体系fragment</string>
+    <string name="offcial">公众号fragment</string>
+    <string name="my">我的fragment</string>
+    <string name="project">项目fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

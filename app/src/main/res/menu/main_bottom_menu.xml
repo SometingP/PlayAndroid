@@ -24,17 +24,17 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/navigation"
-        android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
-        android:title="导航"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/project"
         android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:title="项目"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/my"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:title="我的"
         app:showAsAction="ifRoom" />
 
 </menu>

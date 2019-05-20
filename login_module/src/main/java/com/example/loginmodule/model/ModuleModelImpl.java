@@ -1,15 +1,15 @@
 package com.example.loginmodule.model;
 
-import com.example.corelib.net.RetorfitService;
-import com.example.corelib.net.rx.RxjavaClient;
-import com.example.corelib.net.rx.RxjavaService;
+import com.example.loginmodule.SslFactor;
 import com.example.loginmodule.bean.LoginResultBean;
 import com.example.loginmodule.bean.RegisterResultBean;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.util.HashMap;
+import java.io.IOException;
 
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -23,6 +23,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @author 彭翔宇
  */
 public class ModuleModelImpl implements ModuleModel {
+
+    private  OkHttpClient mOkHttpClient;
+    private Retrofit retrofit;
+
+    public ModuleModelImpl() {
+        mOkHttpClient  = new OkHttpClient.Builder()
+                .sslSocketFactory(SslFactor.getSslSocketFactor())
+                .hostnameVerifier(new SslFactor.TrustAllHostnameVerifier())
+                .addInterceptor(new Interceptor() {
+                    @Override
+                    public okhttp3.Response intercept(Chain chain) throws IOException {
+                        okhttp3.Response originalResponse = chain.proceed(chain.request());
+                        //这里获取请求返回的cookie
+                        if (!originalResponse.headers("Set-Cookie").isEmpty()) {
+                            final StringBuffer cookieBuffer = new StringBuffer();
+                        }
+                        return originalResponse;
+                    }
+                })
+                .build();
+        retrofit = new Retrofit.Builder().baseUrl("https://www.wanandroid.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(mOkHttpClient)
+                .build();
+    }
+
     /**
      * 登录
      * @param username
@@ -30,9 +56,6 @@ public class ModuleModelImpl implements ModuleModel {
      */
     @Override
     public void login(String username, String password) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://www.wanandroid.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
         retrofit.create(Api.class).login(username,password).enqueue(new Callback<LoginResultBean>() {
             @Override
             public void onResponse(Call<LoginResultBean> call, Response<LoginResultBean> response) {
@@ -52,9 +75,7 @@ public class ModuleModelImpl implements ModuleModel {
      */
     @Override
     public void register(String username,String password,String repassword) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://www.wanandroid.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+
         retrofit.create(Api.class).register(username,password,repassword).enqueue(new Callback<RegisterResultBean>() {
             @Override
             public void onResponse(Call<RegisterResultBean> call, Response<RegisterResultBean> response) {

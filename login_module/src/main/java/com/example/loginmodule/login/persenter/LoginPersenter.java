@@ -17,10 +17,11 @@ import java.lang.ref.WeakReference;
  */
 public class LoginPersenter implements BasePersenter {
     WeakReference<LoginInterface> mView;
-    ModuleModel model = new ModuleModelImpl();
+    ModuleModel model;
 
     public LoginPersenter(LoginInterface view) {
         mView = new WeakReference<>(view);
+        model = new ModuleModelImpl();
     }
 
     public void login(String username, String password) {

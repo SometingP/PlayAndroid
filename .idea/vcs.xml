@@ -2,10 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/collection_module" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/knowledge_module" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/my_module" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/search_module" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/share_module" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/collection_module" vcs="" />
+    <mapping directory="$PROJECT_DIR$/knowledge_module" vcs="" />
+    <mapping directory="$PROJECT_DIR$/my_module" vcs="" />
+    <mapping directory="$PROJECT_DIR$/search_module" vcs="" />
+    <mapping directory="$PROJECT_DIR$/share_module" vcs="" />
   </component>
 </project>

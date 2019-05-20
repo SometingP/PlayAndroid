@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/callback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dip"
+        android:text="通用设置"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/automatic_cache"
+        android:layout_width="match_parent"
+        android:layout_height="60dip">
+
+        <ImageView
+            android:id="@+id/icon_cache"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dip"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/icon_cache"
+            android:text="自动缓存"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cache_checkbox"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/planless_model"
+        android:layout_width="match_parent"
+        android:layout_height="60dip">
+
+        <ImageView
+            android:id="@+id/icon_model"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dip"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/icon_model"
+            android:text="无图模式"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/planless_checkbox"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="60dip">
+
+        <ImageView
+            android:id="@+id/icon_clearCache"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dip"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/icon_clearCache"
+            android:text="清除缓存"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cache_sezi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:text="58.12 kb"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>
